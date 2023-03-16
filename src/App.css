@@ -1,0 +1,17 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200vh;
+}
+
+h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+
+button{
+  margin: 1rem 0;
+}
