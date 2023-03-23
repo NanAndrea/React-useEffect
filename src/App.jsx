@@ -35,7 +35,7 @@ function App() {
   const [showUsers,setShowUsers] = useState(false);
   const [apiUsers,setApiUsers] = useState([]);
 
-  const [showPosts,setShowPosts] = useState(false);
+  
   const [apiPosts,setApiPosts] = useState([]);
 
   const [pare, setPare] = useState(0);
@@ -92,10 +92,6 @@ function App() {
     };
 
 
-  function handleShowPosts(){
-    setShowPosts(showPosts => !showPosts);
-  }
-
 
   
   return (
@@ -131,8 +127,8 @@ function App() {
       <button onClick={handleShowUsers}>{showUsers ? "Ascunde lista de utilizatori" : "Afiseaza lista de utilizatori"}</button>
       {showUsers && <UserList users={apiUsers}/>}
       
-      <button onClick={handleShowPosts}>{showPosts? "Ascunde lista de postari" : "Afiseaza lista de postari"}</button>
-      {showPosts && <PostList posts={apiPosts}/>}
+      <button onClick={handleShowUsers}>{showUsers? "Afiseaza lista de postari" : "Ascunde lista de postari"}</button>
+      {!showUsers && <PostList posts={apiPosts}/>}
 
       
       
